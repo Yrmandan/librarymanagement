@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #007bff;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 10px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+button:hover {
+    background: #218838;
+}
+main{
+    margin-top: 20px;
+}
+ul{
+    list-style: none;
+    padding: 0;
+}
+li {
+    background: #f8f9fa;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 400px;
+}
+#bookForm{
+    padding: 10px 0px;
+}
+.hidden{
+    display: none;
+}
+input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: calc(100% - 22px);
+}
+
+button[type="button"] {
+    background: #dc3545; 
+}
+button[type="button"]:hover {
+    background: #c82333; 
+}
+#booksListSection{
+    width: 60vw;
+    margin: auto;
+}
+.book-details{
+    display: flex;
+    flex-direction: column;
+}
+.book-author{
+    font-weight: 200;
+}
+#logoutBtn{
+    background-color: red;
+}
+#logoutBtn:hover{
+    background-color: #a80011;
+}
+.nav-admin{
+    display: flex;
+    flex-direction: column;
+}
+.preview-btn{
+    background-color: #007bff; 
+}
+.preview-btn:hover{
+    background-color: #024d9d; 
+}
+.delete-btn{
+    background-color: red;
+}
+.delete-btn:hover{
+    background-color: rgb(176, 0, 0);
+}
+#cancelDeleteBtn {
+    background-color: gray ;;
+    color: white;
+}
+#cancelDeleteBtn:hover{
+    background-color: rgb(80, 80, 80);
+}

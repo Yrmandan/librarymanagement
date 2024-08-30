@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management</title>
+    <link rel="stylesheet" href="./css/styles.css">
+  
+</head>
+<body>
+    <header>
+        <div class="nav-admin">
+            <h1>Library Management System</h1>
+            <h3>Admin</h3>
+        </div>
+        <div class="header-buttons">
+            <button id="addBookBtn">Add Book</button>
+            <button id="logoutBtn">Logout</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="booksListSection">
+            <h2>Available Books</h2>
+            <ul id="booksList">
+                
+            </ul>
+        </section>
+
+        <div id="bookModal" class="modal hidden">
+            <div class="modal-content">
+                <h2 id="modalTitle">Add Book</h2>
+                <form id="bookForm">
+                    <input type="hidden" id="bookId" value="">
+                    <input type="text" id="title" placeholder="Title" required>
+                    <input type="text" id="author" placeholder="Author" required>
+                    <input type="text" id="genre" placeholder="Genre" required>
+                    <input type="number" id="publication_year" placeholder="Publication Year" required>
+                    <input type="text" id="language" placeholder="Language" required>
+                    <input type="number" id="price" placeholder="Price" required>
+                    <input type="text" id="isbn" placeholder="ISBN" required>
+                    <input type="text" id="publisher" placeholder="Publisher" required>
+                    <input type="number" step="0.1" id="rating" placeholder="Rating" required>
+                    <button type="submit">Save Book</button>
+                    <button type="button" id="closeModalBtn">Cancel</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="previewModal" class="modal hidden">
+            <div class="modal-content">
+                <h2>Book Details</h2>
+                <div id="bookDetails"></div>
+                <div class="form-actions">
+                    <button type="button" id="closePreviewModalBtn">Close</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="deleteModal" class="modal hidden">
+            <div class="modal-content">
+                <h2>Confirm Deletion</h2>
+                <p>Are you sure you want to delete this book?</p>
+                <div class="form-actions">
+                    <button type="button" id="confirmDeleteBtn">Delete</button>
+                    <button type="button" id="cancelDeleteBtn">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./js/admin-script.js"></script>
+</body>
+</html>

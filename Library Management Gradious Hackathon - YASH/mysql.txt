@@ -1,0 +1,26 @@
+CREATE DATABASE books_db;
+
+USE books_db;
+
+CREATE TABLE books (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(255) NOT NULL,
+    author VARCHAR(255) NOT NULL,
+    genre VARCHAR(100),
+    publication_year INT,
+    language VARCHAR(50),
+    price DECIMAL(10, 2),
+    isbn VARCHAR(20) UNIQUE,
+    publisher VARCHAR(255),
+    rating DECIMAL(3, 2)
+);
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+);
+INSERT INTO books (title, author, genre, publication_year, language, price, isbn, publisher, rating) VALUES
+('Book 1', 'Author 1', 'Genre 1', 2001, 'Eng', 1499, '132131', 'Publisher 1', 4.1),
+('Book 2', 'Author 2', 'Genre 2', 2002, 'Tel', 1299, '232121', 'Publisher 2', 4.2),
+('Book 3', 'Author 3', 'Genre 3', 2003, 'Hindi', 1799, '313212', 'Publisher 3', 4.3),
+('Book 4', 'Author 4', 'Genre 4', 2004, 'Tamil', 599, '415413', 'Publisher 4', 4.4);
